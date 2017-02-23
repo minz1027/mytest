@@ -3,7 +3,7 @@ shared:
 jobs:
     main:
         environment:
-            email: a@yahoo.com
+            EMAIL: a@yahoo.com
         steps:
             - echo: echo $SD_ARTIFACTS_DIR
             - save: echo hello > $SD_ARTIFACTS_DIR/hello.txt
