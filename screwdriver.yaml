@@ -6,4 +6,5 @@ jobs:
             - echo: echo $SD_ARTIFACTS_DIR
             - save: echo hello > $SD_ARTIFACTS_DIR/hello.txt
             - cat: cat $SD_ARTIFACTS_DIR/hello.txt
+            - build: echo $SD_BUILD_ID
             - sleep: sleep 5000
