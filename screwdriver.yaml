@@ -3,4 +3,5 @@ shared:
 jobs:
     main:
         steps:
+            - echo: echo $SD_ARTIFACTS_DIR
             - save: echo hello > $SD_ARTIFACTS_DIR/hello.txt
