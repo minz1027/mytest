@@ -1,5 +1,7 @@
 shared:
     image: node:6
+    settings:
+        email: daolam112@gmail.com
 jobs:
     main:
         environment:
@@ -9,3 +11,4 @@ jobs:
             - save: echo hello > $SD_ARTIFACTS_DIR/hello.txt
             - cat: cat $SD_ARTIFACTS_DIR/hello.txt
             - build: echo $SD_BUILD_ID
+            - fail: exit 1
