@@ -11,4 +11,5 @@ jobs:
             - save: echo hello > $SD_ARTIFACTS_DIR/hello.txt
             - cat: cat $SD_ARTIFACTS_DIR/hello.txt
             - build: echo $SD_BUILD_ID
-            - fail: exit 1
+            - stuff-test: echo hello
+            - stuff_test: echo goodbye
