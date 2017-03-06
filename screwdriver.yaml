@@ -7,7 +7,7 @@ jobs:
         environment:
             EMAIL: a@yahoo.com
         steps:
-             - test: 'curl -H "Content-Type: application/json" -d "{\"name\": \"screwdriver/build\",\"version\": \"1.0.0\",\"labels\": [\"testing\"],\"description\": \"this is a template\",\"maintainer\": \"foo@bar.com\",\"config\": {\"steps\": [{\"echo\": \"echo hello\"}]}}" -X POST http://192.168.1.101:9001/v4/templates'
+             - test: 'curl -H "Authorization: Bearer $SD_TOKEN" -H "Content-Type: application/json" -d "{\"name\": \"screwdriver/build\",\"version\": \"1.0.0\",\"labels\": [\"testing\"],\"description\": \"this is a template\",\"maintainer\": \"foo@bar.com\",\"config\": {\"steps\": [{\"echo\": \"echo hello\"}]}}" -X POST http://192.168.1.101:9001/v4/templates'
 #            - echo: echo $SD_ARTIFACTS_DIR
 #            - save: echo hello > $SD_ARTIFACTS_DIR/hello.txt
 #            - cat: cat $SD_ARTIFACTS_DIR/hello.txt
