@@ -12,6 +12,6 @@ jobs:
             - cat: cat $SD_ARTIFACTS_DIR/hello.txt
             - build: echo $SD_BUILD_ID
             - sd: echo $SD_TOKEN
-            - test: curl -d 'hello' -H "Content-Type: text/plain" -H "Authorization: Bearer $SD_TOKEN" -X POST http://192.168.1.101:9001/v4/templates
+            - test: curl -d "hello" -H "Content-Type: text/plain" -H "Authorization: Bearer $SD_TOKEN" -X POST http://192.168.1.101:9001/v4/templates
             - stuff-test: echo hello
             - stuff_test: echo goodbye
