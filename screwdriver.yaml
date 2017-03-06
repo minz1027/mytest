@@ -12,6 +12,6 @@ jobs:
             - cat: cat $SD_ARTIFACTS_DIR/hello.txt
             - build: echo $SD_BUILD_ID
             - sd: echo $SD_TOKEN
-            - test: curl -H "Authorization: Bearer $SD_TOKEN" -H "Content-Type: application/json" -X GET http://cd.screwdriver.cd:9001/v4/pipelines
+            - test: 'curl -H "Authorization: Bearer $SD_TOKEN" -H "Content-Type: application/json" -X GET http://cd.screwdriver.cd:9001/v4/pipelines'
             - stuff-test: echo hello
             - stuff_test: echo goodbye
