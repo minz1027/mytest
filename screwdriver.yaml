@@ -3,6 +3,8 @@ shared:
     # EMAIL NOTIFICATIONS DMO
     # settings:
     #    email: daolam112@gmail.com
+workflow:
+    - second
 jobs:
     main:
         steps:
@@ -15,3 +17,6 @@ jobs:
         #   - META DEMO
             - set: /opt/sd/meta set foo bar
             - get: /opt/sd/meta get foo
+    second:
+        steps:
+            - get-from-parent- /opt/sd/meta get foo
