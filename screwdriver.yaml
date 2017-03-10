@@ -19,7 +19,4 @@ jobs:
  
         #   - META DEMO
             - set: /opt/sd/meta set foo bar
-    second:
-        steps:
-            - get: opt/sd/meta get foo
-            
+            - get: /opt/sd/meta get foo
