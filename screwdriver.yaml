@@ -7,11 +7,18 @@ jobs:
         environment:
             EMAIL: a@yahoo.com
         steps:
-#             - test: 'curl -H "Authorization: Bearer $SD_TOKEN" -H "Content-Type: application/json" -d "{\"name\": \"screwdriver/publish\",\"version\": \"1.0.0\",\"labels\": [\"test\"],\"description\": \"this is a template\",\"maintainer\": \"foo@bar.com\",\"config\": {\"steps\": [{\"echo\": \"echo hello\"}]}}" -X POST http://192.168.1.101:9001/v4/templates'
-            - echo: echo $SD_ARTIFACTS_DIR
-            - save: echo hello > $SD_ARTIFACTS_DIR/hello.txt
-            - cat: cat $SD_ARTIFACTS_DIR/hello.txt
-            - build: echo $SD_BUILD_ID
-            - sd: echo $SD_TOKEN
-            - stuff-test: echo hello
-            - stuff_test: echo goodbye
+        #   - ARTIFACT DEMO
+        #   - test: 'curl -H "Authorization: Bearer $SD_TOKEN" -H "Content-Type: application/json" -d "{\"name\": \"screwdriver/publish\",\"version\": \"1.0.0\",\"labels\": [\"test\"],\"description\": \"this is a template\",\"maintainer\": \"foo@bar.com\",\"config\": {\"steps\": [{\"echo\": \"echo hello\"}]}}" -X POST http://192.168.1.101:9001/v4/templates'
+        #   - echo: echo $SD_ARTIFACTS_DIR
+        #   - save: echo hello > $SD_ARTIFACTS_DIR/hello.txt
+        #   - cat: cat $SD_ARTIFACTS_DIR/hello.txt
+        #   - build: echo $SD_BUILD_ID
+        #   - sd: echo $SD_TOKEN
+        #   - stuff-test: echo hello
+        #   - stuff_test: echo goodbye
+        #   - META DEMO
+            - /opt/meta set foo bar
+    second:
+        steps:
+            - opt/meta get foo
+            
