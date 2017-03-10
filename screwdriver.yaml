@@ -6,8 +6,6 @@ workflow:
     - second
 jobs:
     main:
-        environment:
-            EMAIL: a@yahoo.com
         steps:
         #   - ARTIFACT DEMO
         #   - test: 'curl -H "Authorization: Bearer $SD_TOKEN" -H "Content-Type: application/json" -d "{\"name\": \"screwdriver/publish\",\"version\": \"1.0.0\",\"labels\": [\"test\"],\"description\": \"this is a template\",\"maintainer\": \"foo@bar.com\",\"config\": {\"steps\": [{\"echo\": \"echo hello\"}]}}" -X POST http://192.168.1.101:9001/v4/templates'
@@ -18,9 +16,10 @@ jobs:
         #   - sd: echo $SD_TOKEN
         #   - stuff-test: echo hello
         #   - stuff_test: echo goodbye
+ 
         #   - META DEMO
-            - /opt/sd/meta set foo bar
+            - set: /opt/sd/meta set foo bar
     second:
         steps:
-            - opt/sd/meta get foo
+            - get: opt/sd/meta get foo
             
