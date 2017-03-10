@@ -3,7 +3,6 @@ shared:
     settings:
         email: daolam112@gmail.com
 workflow:
-    - main
     - second
 jobs:
     main:
