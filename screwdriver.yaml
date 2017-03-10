@@ -1,7 +1,8 @@
 shared:
     image: node:6
-    settings:
-        email: daolam112@gmail.com
+    # EMAIL NOTIFICATIONS DMO
+    # settings:
+    #    email: daolam112@gmail.com
 jobs:
     main:
         steps:
