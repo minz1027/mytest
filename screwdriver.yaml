@@ -19,8 +19,8 @@ jobs:
         #   - stuff-test: echo hello
         #   - stuff_test: echo goodbye
         #   - META DEMO
-            - /opt/meta set foo bar
+            - /opt/sd/meta set foo bar
     second:
         steps:
-            - opt/meta get foo
+            - opt/sd/meta get foo
             
