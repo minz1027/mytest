@@ -11,10 +11,11 @@ jobs:
     main:
         steps:
         #   - ARTIFACT DEMO
-        #   - test: 'curl -H "Authorization: Bearer $SD_TOKEN" -H "Content-Type: application/json" -d "{\"name\": \"screwdriver/publish\",\"version\": \"1.0.0\",\"labels\": [\"test\"],\"description\": \"this is a template\",\"maintainer\": \"foo@bar.com\",\"config\": {\"steps\": [{\"echo\": \"echo hello\"}]}}" -X POST http://192.168.1.101:9001/v4/templates'
-        #   - echo: echo $SD_ARTIFACTS_DIR
-        #   - save: echo hello > $SD_ARTIFACTS_DIR/hello.txt
-        #   - cat: cat $SD_ARTIFACTS_DIR/hello.txt
+            - test: 'curl -H "Authorization: Bearer $SD_TOKEN" -H "Content-Type: application/json" -d "{\"name\": \"screwdriver/publish\",\"version\": \"1.0.0\",\"labels\": [\"test\"],\"description\": \"this is a template\",\"maintainer\": \"foo@bar.com\",\"config\": {\"steps\": [{\"echo\": \"echo hello\"}]}}" -X POST http://192.168.1.101:9001/v4/templates'
+            - echo: echo $SD_ARTIFACTS_DIR
+            - save: echo hello > $SD_ARTIFACTS_DIR/hello.txt
+            - mkdir: mkdir $SD_ARTIFACTS_DIR/testdir
+            - cat: cat $SD_ARTIFACTS_DIR/hello.txt
         
         #   BUILD
             - build: echo $SD_TOKEN
