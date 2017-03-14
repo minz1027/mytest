@@ -1,12 +1,8 @@
 shared:
     image: node:6
-    secrets:
-        - TEST
     # EMAIL NOTIFICATIONS DMO
     # settings:
     #    email: daolam112@gmail.com
-workflow:
-    - second
 jobs:
     main:
         steps:
@@ -16,15 +12,3 @@ jobs:
             - save: echo hello > $SD_ARTIFACTS_DIR/hello.txt
             - mkdir: mkdir $SD_ARTIFACTS_DIR/testdir
             - cat: cat $SD_ARTIFACTS_DIR/hello.txt
-        
-        #   BUILD
-            - build: echo $SD_TOKEN
- 
-        #   - META DEMO
-            - set: /opt/sd/meta set foo bar
-            - get: /opt/sd/meta get foo
-        secrets:
-            - TEST
-    second:
-        steps:
-            - get-from-parent: /opt/sd/meta get foo
